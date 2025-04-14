@@ -12,9 +12,13 @@ public class BeanDuplicateConfigurationTest {
     void testBeanDuplicateConfiguration() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanDuplicateConfiguration.class);
 
-        Assertions.assertThrows(NoUniqueBeanDefinitionException.class, () -> {
-            Foo foo = applicationContext.getBean(Foo.class);
-        });
+        // as Bean annotated primary, the result would be primary
+        // otherwise it should assert throws because of NoUniqueBeanDefinitionException
+//        Assertions.assertThrows(NoUniqueBeanDefinitionException.class, () -> {
+//            Foo foo = applicationContext.getBean(Foo.class);
+//        });
+
+        Foo foo = applicationContext.getBean(Foo.class);
     }
 
     @Test
@@ -25,5 +29,18 @@ public class BeanDuplicateConfigurationTest {
         Foo foo2 = applicationContext.getBean("foo2", Foo.class);
 
         Assertions.assertNotSame(foo1, foo2);
+    }
+
+    @Test
+    void testBeanDuplicateConfigurationPrimary() {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanDuplicateConfiguration.class);
+        Foo foo1 = applicationContext.getBean(Foo.class);
+        Foo foo2 = applicationContext.getBean("foo2", Foo.class);
+
+        Foo foo = applicationContext.getBean("foo1", Foo.class);
+
+        Assertions.assertNotSame(foo1, foo2);
+        Assertions.assertSame(foo, foo1);
+        Assertions.assertNotSame(foo, foo2);
     }
 }

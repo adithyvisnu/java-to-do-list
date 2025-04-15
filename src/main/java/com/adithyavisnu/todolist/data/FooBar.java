@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.Value;
 
 @Data
-@Value
+@AllArgsConstructor
 public class FooBar {
     private Foo foo;
     private Bar bar;

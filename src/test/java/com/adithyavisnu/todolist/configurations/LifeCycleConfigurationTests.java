@@ -1,13 +1,10 @@
-package com.adithyavisnu.todolist.configuration;
+package com.adithyavisnu.todolist.configurations;
 
 import com.adithyavisnu.todolist.data.Connection;
-import com.adithyavisnu.todolist.data.Foo;
 import com.adithyavisnu.todolist.data.Server;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

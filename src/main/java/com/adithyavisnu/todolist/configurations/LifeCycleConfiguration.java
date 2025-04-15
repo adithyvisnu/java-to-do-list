@@ -1,8 +1,7 @@
-package com.adithyavisnu.todolist.configuration;
+package com.adithyavisnu.todolist.configurations;
 
 import com.adithyavisnu.todolist.data.Connection;
 import com.adithyavisnu.todolist.data.Server;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

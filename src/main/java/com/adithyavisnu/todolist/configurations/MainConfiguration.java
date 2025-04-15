@@ -1,4 +1,4 @@
-package com.adithyavisnu.todolist.configuration;
+package com.adithyavisnu.todolist.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

@@ -1,4 +1,4 @@
-package com.adithyavisnu.todolist.configuration;
+package com.adithyavisnu.todolist.configurations;
 
 import com.adithyavisnu.todolist.data.Bar;
 import com.adithyavisnu.todolist.data.Foo;

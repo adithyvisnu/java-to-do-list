@@ -1,6 +1,6 @@
 package com.adithyavisnu.todolist;
 
-import com.adithyavisnu.todolist.configuration.BeanDependencyInjectionConfiguration;
+import com.adithyavisnu.todolist.configurations.BeanDependencyInjectionConfiguration;
 import com.adithyavisnu.todolist.data.FooBar;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
